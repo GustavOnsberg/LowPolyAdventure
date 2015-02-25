@@ -6,7 +6,7 @@ public class CameraController : MonoBehaviour {
     public float delay;
 
     [HideInInspector]
-    public Transform player;
+    public Vector3 goTo;
 
 	void Start ()
     {
@@ -15,6 +15,6 @@ public class CameraController : MonoBehaviour {
 
 	void Update ()
     {
-        transform.position = Vector3.Lerp(transform.position, player.position, delay * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, goTo, delay * Time.deltaTime);
 	}
 }
