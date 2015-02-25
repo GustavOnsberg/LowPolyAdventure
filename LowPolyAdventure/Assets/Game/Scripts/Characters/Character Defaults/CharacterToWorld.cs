@@ -12,10 +12,6 @@ public class CharacterToWorld : MonoBehaviour {
 	void Start () {
         cameraController = GameObject.Find("CameraController");
         cameraControllerScript = cameraController.GetComponent<CameraController>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        cameraControllerScript.goTo = transform.position;
-	}
+        cameraControllerScript.player = transform;
+    }
 }
