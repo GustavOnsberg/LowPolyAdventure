@@ -16,5 +16,6 @@ public class CameraController : MonoBehaviour {
 	void Update ()
     {
         transform.position = Vector3.Lerp(transform.position, goTo, delay * Time.deltaTime);
-	}
+        //transform.position = Vector3.MoveTowards(transform.position, goTo, delay * Time.deltaTime);
+    }
 }
