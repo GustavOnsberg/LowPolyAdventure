@@ -1,0 +1,132 @@
+fileFormatVersion: 2
+guid: ecb4d28edc9b9bb4ba473b57d1425aea
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Extension001
+    100002: Extension002
+    100004: Extension003
+    100006: Foundation001
+    100008: Foundation002
+    100010: Foundation003
+    100012: House001
+    100014: House002
+    100016: House003
+    100018: //RootNode
+    100020: Roof001
+    100022: Roof002
+    100024: Roof003
+    100026: TowerHouse001
+    100028: TowerHouse002
+    400000: Extension001
+    400002: Extension002
+    400004: Extension003
+    400006: Foundation001
+    400008: Foundation002
+    400010: Foundation003
+    400012: House001
+    400014: House002
+    400016: House003
+    400018: //RootNode
+    400020: Roof001
+    400022: Roof002
+    400024: Roof003
+    400026: TowerHouse001
+    400028: TowerHouse002
+    2300000: Extension001
+    2300002: Extension002
+    2300004: Extension003
+    2300006: Foundation001
+    2300008: Foundation002
+    2300010: Foundation003
+    2300012: House001
+    2300014: House002
+    2300016: House003
+    2300018: Roof001
+    2300020: Roof002
+    2300022: Roof003
+    2300024: TowerHouse001
+    2300026: TowerHouse002
+    3300000: Extension001
+    3300002: Extension002
+    3300004: Extension003
+    3300006: Foundation001
+    3300008: Foundation002
+    3300010: Foundation003
+    3300012: House001
+    3300014: House002
+    3300016: House003
+    3300018: Roof001
+    3300020: Roof002
+    3300022: Roof003
+    3300024: TowerHouse001
+    3300026: TowerHouse002
+    4300000: Extension001
+    4300002: Extension002
+    4300004: Extension003
+    4300006: Foundation001
+    4300008: Foundation002
+    4300010: Foundation003
+    4300012: House001
+    4300014: House002
+    4300016: House003
+    4300018: Roof001
+    4300020: Roof002
+    4300022: Roof003
+    4300024: TowerHouse001
+    4300026: TowerHouse002
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
