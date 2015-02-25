@@ -47,10 +47,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Game\Scripts\Camera\CameraController.cs" />
-     <Compile Include="Assets\Game\Scripts\Characters\Character Defaults\CharacterMovement.cs" />
-     <Compile Include="Assets\Game\Scripts\Characters\Character Defaults\CharacterToWorld.cs" />
      <Compile Include="Assets\Game\Scripts\Game\GameController.cs" />
      <Compile Include="Assets\Game\Scripts\Game\SaveGame.cs" />
+     <Compile Include="Assets\Game\Scripts\Player\CharacterMovement.cs" />
+     <Compile Include="Assets\Game\Scripts\Player\CharacterToWorld.cs" />
+     <Compile Include="Assets\Game\Scripts\Player\PlayerWeapon.cs" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseEffectShaderRGB.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
