@@ -21,9 +21,9 @@ public class ArrowSpawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetMouseButtonDown(0) && countDown <= 0)
+        if (Input.GetMouseButtonDown(0))
         {
-            Instantiate(arrow, transform.position, transform.rotation);
+            Instantiate(arrow, transform.position, Quaternion.identity);
         }
 	}
 }
