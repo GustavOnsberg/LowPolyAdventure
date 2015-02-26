@@ -36,17 +36,8 @@ public class ArrowSpawner : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(0))
         {
-            /*Instantiate(arrow, transform.position, Quaternion.identity);*/
-
-            shootWhenReady = true;
-        }
-
-        if (readyToShoot && shootWhenReady)
-        {
-            Instantiate(arrow, transform.position, Quaternion.identity);
-            countDown = shootDelay;
-            readyToShoot = false;
-            shootWhenReady = false;
+            GameObject go = Instantiate(arrow, transform.position, transform.rotation) as GameObject;
+            go.rigidbody.AddForce(transform.forward * 20, ForceMode.Impulse);
         }
 	}
 }
