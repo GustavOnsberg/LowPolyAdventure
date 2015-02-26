@@ -4,9 +4,9 @@ using System.Collections;
 public class ArrowMovement : MonoBehaviour {
 
 	// Use this for initialization
-
     float speed;
     bool firstFrame;
+    public float damage;
 
 	void Start () {
         speed = GameObject.Find("GameController").GetComponent<GameController>().arrowSpeed;
@@ -15,12 +15,16 @@ public class ArrowMovement : MonoBehaviour {
 	
     void FixedUpdate() 
 	{
-        rigidbody.AddForce(transform.up * speed);
+        rigidbody.AddForce(transform.forward * speed, ForceMode.Force);
 	}
 
     void OnCollisionEnter(Collision col)
     {
-        Destroy(col.gameObject);
+        if (col.transform.CompareTag("Enemy"))
+        {
+            EnemyHealth eh = col.transform.GetComponent<EnemyHealth>();
+            eh.AdjustHealth(damage);
+        }
         Destroy(gameObject);
     }
 }

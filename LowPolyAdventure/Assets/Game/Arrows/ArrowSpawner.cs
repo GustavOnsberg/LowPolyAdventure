@@ -12,18 +12,19 @@ public class ArrowSpawner : MonoBehaviour {
 
     public float shootDelay;
     float countDown;
-
+    float speed;
 
 	// Use this for initialization
 	void Start () {
-	    
+        speed = GameObject.Find("GameController").GetComponent<GameController>().arrowSpeed;
 	}
 	
 	// Update is called once per frame
 	void Update () {
         if (Input.GetMouseButtonDown(0))
         {
-            Instantiate(arrow, transform.position, Quaternion.identity);
+            GameObject go = Instantiate(arrow, transform.position, transform.rotation) as GameObject;
+            go.rigidbody.AddForce(transform.forward * speed, ForceMode.Impulse);
         }
 	}
 }
