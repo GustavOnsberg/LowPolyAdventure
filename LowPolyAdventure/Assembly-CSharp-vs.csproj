@@ -52,8 +52,10 @@
      <Compile Include="Assets\Game\Scripts\Player\CharacterMovement.cs" />
      <Compile Include="Assets\Game\Scripts\Player\CharacterToWorld.cs" />
      <Compile Include="Assets\Game\Scripts\Player\PlayerWeapon.cs" />
-     <Compile Include="Assets\Spell.cs" />
-     <Compile Include="Assets\Staff.cs" />
+     <Compile Include="Assets\Game\Scripts\Spell.cs" />
+     <Compile Include="Assets\Game\Scripts\Staff.cs" />
+     <Compile Include="Assets\RootMotionTutorial\Final_RootMotion\Scripts\Final_PlayerMovement.cs" />
+     <Compile Include="Assets\RootMotionTutorial\Final_RootMotion\Scripts\OrbitingCamera.cs" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseEffectShaderRGB.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />

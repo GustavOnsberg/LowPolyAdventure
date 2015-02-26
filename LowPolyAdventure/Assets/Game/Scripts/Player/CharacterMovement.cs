@@ -5,22 +5,22 @@ public class CharacterMovement : MonoBehaviour {
 
     public float speed = 5;
 
-
-
     Ray mouseRay;
     RaycastHit mouseHit;
+    Animator anim;
 
 	void Start ()
     {
-	    
+	    anim = GetComponent<Animator>();    
 	}
 	
 	void Update ()
     {
         rigidbody.velocity = new Vector3(Input.GetAxis("Horizontal") * speed,
-                                      rigidbody.velocity.y, Input.GetAxis("Vertical") * speed);
+        rigidbody.velocity.y, Input.GetAxis("Vertical") * speed);
 
-
+        anim.SetFloat("Rigid X", rigidbody.velocity.x);
+        anim.SetFloat("Rigid Z", rigidbody.velocity.z);
 
         SetPlayerDirection();
 	}
