@@ -12,19 +12,41 @@ public class ArrowSpawner : MonoBehaviour {
 
     public float shootDelay;
     float countDown;
-    float speed;
+
+    bool readyToShoot;
+    bool shootWhenReady;
+
 
 	// Use this for initialization
 	void Start () {
-        speed = GameObject.Find("GameController").GetComponent<GameController>().arrowSpeed;
+	    
 	}
 	
 	// Update is called once per frame
 	void Update () {
+        if (countDown <= 0)
+    	{
+            readyToShoot = true;
+    	}
+        else
+        {
+            countDown -= Time.deltaTime;
+        }
+
+
         if (Input.GetMouseButtonDown(0))
         {
-            GameObject go = Instantiate(arrow, transform.position, transform.rotation) as GameObject;
-            go.rigidbody.AddForce(transform.forward * speed, ForceMode.Impulse);
+            /*Instantiate(arrow, transform.position, Quaternion.identity);*/
+
+            shootWhenReady = true;
+        }
+
+        if (readyToShoot && shootWhenReady)
+        {
+            Instantiate(arrow, transform.position, Quaternion.identity);
+            countDown = shootDelay;
+            readyToShoot = false;
+            shootWhenReady = false;
         }
 	}
 }
