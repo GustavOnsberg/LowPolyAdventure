@@ -11,7 +11,7 @@
         // Ambient pass
         Pass {
         Name "BASE"
-        Tags {"LightMode" = "PixelOrNone"}
+        Tags {"LightMode" = "Always" /* Upgrade NOTE: changed from PixelOrNone to Always */}
         Color [_PPLAmbient]
         SetTexture [_BumpMap] {
             constantColor (.5,.5,.5)
