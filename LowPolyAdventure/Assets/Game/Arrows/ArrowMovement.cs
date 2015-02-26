@@ -7,7 +7,6 @@ public class ArrowMovement : MonoBehaviour {
     float speed;
     bool firstFrame;
     public float damage;
-    Vector3 freezePos;
 
 	void Start () {
         speed = GameObject.Find("GameController").GetComponent<GameController>().arrowSpeed;
@@ -16,16 +15,8 @@ public class ArrowMovement : MonoBehaviour {
 	
     void FixedUpdate() 
 	{
-        if (speed > 0)
-        {
-            rigidbody.AddForce(transform.forward * speed, ForceMode.Force);
-            rigidbody.AddForce(-transform.up * speed/2, ForceMode.Force);
-        }
-        else
-        {
-            transform.position = freezePos;
-        }
-    }
+        rigidbody.AddForce(transform.forward * speed, ForceMode.Force);
+	}
 
     void OnCollisionEnter(Collision col)
     {
@@ -34,11 +25,6 @@ public class ArrowMovement : MonoBehaviour {
             EnemyHealth eh = col.transform.GetComponent<EnemyHealth>();
             eh.AdjustHealth(damage);
         }
-        transform.parent = col.transform;
-        transform.rigidbody.velocity = Vector3.zero;
-        rigidbody.freezeRotation = true;
-        freezePos = transform.position;
-        Destroy(transform.collider);
-        Destroy(this);
+        Destroy(gameObject);
     }
 }
