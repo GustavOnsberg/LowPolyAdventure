@@ -10,16 +10,17 @@ public class ArrowMovement : MonoBehaviour {
 
 	void Start () {
         speed = GameObject.Find("GameController").GetComponent<GameController>().arrowSpeed;
-        //rigidbody.AddForce(transform.forward * speed, ForceMode.Impulse);
-        rigidbody.velocity = Vector3.forward * speed;
 	}
 	
-	// Update is called once per frame
-	void Update () {
-        if (firstFrame)
-        {
-            //rigidbody.AddForce(transform.forward * speed, ForceMode.Impulse);
-            firstFrame = false;
-        }
+	
+    void FixedUpdate() 
+	{
+        rigidbody.AddForce(transform.up * speed);
 	}
+
+    void OnCollisionEnter(Collision col)
+    {
+        Destroy(col.gameObject);
+        Destroy(gameObject);
+    }
 }
