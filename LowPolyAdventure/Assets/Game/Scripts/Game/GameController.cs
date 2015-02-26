@@ -3,7 +3,16 @@ using System.Collections;
 
 public class GameController : MonoBehaviour {
 
-	// Use this for initialization
+	
+
+    public float arrowSpeed;
+    public float arrowFireSpeed;
+    public float arrowIceSpeed;
+    public float arrowMagicSpeed;
+
+
+
+
 	void Start () {
 	
 	}

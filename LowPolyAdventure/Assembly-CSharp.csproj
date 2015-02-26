@@ -46,6 +46,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Game\Arrows\ArrowMovement.cs" />
+     <Compile Include="Assets\Game\Arrows\ArrowSpawner.cs" />
      <Compile Include="Assets\Game\Scripts\Camera\CameraController.cs" />
      <Compile Include="Assets\Game\Scripts\Game\GameController.cs" />
      <Compile Include="Assets\Game\Scripts\Game\SaveGame.cs" />
