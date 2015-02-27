@@ -11,7 +11,6 @@ public class ArrowMovement : MonoBehaviour {
 
 	void Start () {
         speed = GameObject.Find("GameController").GetComponent<GameController>().arrowSpeed;
-        Physics.IgnoreLayerCollision(11, 11, true);
 	}
 	
 	
@@ -34,11 +33,6 @@ public class ArrowMovement : MonoBehaviour {
         {
             EnemyHealth eh = col.transform.GetComponent<EnemyHealth>();
             eh.AdjustHealth(damage);
-            if (transform.name == "FreezingArrow(Clone)")
-            {
-                EnemyAI ai = col.transform.GetComponent<EnemyAI>();
-                ai.StartCoroutine("Frozen");
-            }
         }
         transform.parent = col.transform;
         transform.rigidbody.velocity = Vector3.zero;

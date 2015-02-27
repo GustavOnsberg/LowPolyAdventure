@@ -3,10 +3,12 @@ using System.Collections;
 
 public class ArrowSpawner : MonoBehaviour {
 
+
     public GameObject arrow;
     public GameObject arrowFire;
     public GameObject arrowIce;
     public GameObject arrowMagic;
+
 
     public float shootDelay;
     float countDown;
@@ -14,13 +16,24 @@ public class ArrowSpawner : MonoBehaviour {
     bool readyToShoot;
     bool shootWhenReady;
 
-	void Start ()
-    {
+
+	// Use this for initialization
+	void Start () {
 	    
 	}
+	
+	// Update is called once per frame
+	void Update () {
+        if (countDown <= 0)
+    	{
+            readyToShoot = true;
+    	}
+        else
+        {
+            countDown -= Time.deltaTime;
+        }
 
-	void Update ()
-    {
+
         if (Input.GetMouseButtonDown(0))
         {
             GameObject go = Instantiate(arrow, transform.position, transform.rotation) as GameObject;

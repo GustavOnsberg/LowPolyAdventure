@@ -46,7 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\DeadSlime.cs" />
      <Compile Include="Assets\Game\Arrows\ArrowMovement.cs" />
      <Compile Include="Assets\Game\Arrows\ArrowSpawner.cs" />
      <Compile Include="Assets\Game\Scripts\Camera\CameraController.cs" />
